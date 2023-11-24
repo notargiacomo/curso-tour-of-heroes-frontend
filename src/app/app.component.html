@@ -1,2 +1,16 @@
-<h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<mat-toolbar color="primary">
+    <span>{{ title }}</span>
+    <span fxFlex></span>
+    <button mat-icon-button aria-label="dashboard" 
+    routerLink="/dashboard" matTooltip="Dashboard">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Heroes list" 
+    routerLink="heroes" matTooltip="Heroes">
+      <mat-icon>sports_martial_arts</mat-icon>
+    </button>
+</mat-toolbar>
+<div class="content" fxLayoutGap="12px">
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+</div>
